@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPP_Lab5_Dependency Injection Container", "CPP_Lab5_Dependency Injection Container\CPP_Lab5_Dependency Injection Container.csproj", "{30B3FAFB-A6E2-4FB4-B751-B65C0B9F8C41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CPP_Lab5_Dependency Injection Container", "CPP_Lab5_Dependency Injection Container\CPP_Lab5_Dependency Injection Container.csproj", "{30B3FAFB-A6E2-4FB4-B751-B65C0B9F8C41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsMS", "TestsMS\TestsMS.csproj", "{FA60DFE4-9944-4DA3-AC79-8A0E321333A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{30B3FAFB-A6E2-4FB4-B751-B65C0B9F8C41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30B3FAFB-A6E2-4FB4-B751-B65C0B9F8C41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30B3FAFB-A6E2-4FB4-B751-B65C0B9F8C41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA60DFE4-9944-4DA3-AC79-8A0E321333A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA60DFE4-9944-4DA3-AC79-8A0E321333A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA60DFE4-9944-4DA3-AC79-8A0E321333A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA60DFE4-9944-4DA3-AC79-8A0E321333A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

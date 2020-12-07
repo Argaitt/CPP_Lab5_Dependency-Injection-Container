@@ -8,14 +8,11 @@ namespace CPP_Lab5_Dependency_Injection_Container
     {
         static void Main(string[] args)
         {
-            DependenciesConfiguration dependenciesConfiguration = new DependenciesConfiguration();
-            dependenciesConfiguration.Register<ItestClass, TestClass>();
-            DependencyProvider dependencyProvider = new DependencyProvider(dependenciesConfiguration);
-            var test = dependencyProvider.Resolve<ItestClass>();
+            
             
 		}
     }
-    class DependenciesConfiguration
+    public class DependenciesConfiguration
     {
         Dictionary<Type, List<Type>> dependeces = new Dictionary<Type, List<Type>>();
         public void Register<Tinterface,Timp>()
@@ -32,7 +29,7 @@ namespace CPP_Lab5_Dependency_Injection_Container
             return dependeces;
         }
     }
-    class DependencyProvider
+    public class DependencyProvider
     {
         Dictionary<Type, List<Type>> _dependeces;
         public DependencyProvider(DependenciesConfiguration configuration) 
@@ -44,7 +41,20 @@ namespace CPP_Lab5_Dependency_Injection_Container
             var typeinterface = typeof(Tinterface);
             if (_dependeces.ContainsKey(typeinterface)) 
             {
-                return Activator.CreateInstance(_dependeces[typeinterface].First());
+                if (_dependeces[typeinterface].Count == 1)
+                {
+                    return Activator.CreateInstance(_dependeces[typeinterface].First());
+                }
+                else 
+                {
+                    List<Object> objList = new List<object>();
+                    foreach (var item in _dependeces[typeinterface])
+                    {
+                        objList.Add(Activator.CreateInstance(item));
+                    }
+                    return objList;
+                }
+                
             }
             else
                 return 0;
